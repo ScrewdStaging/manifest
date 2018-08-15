@@ -4,12 +4,12 @@
   <!-- Remotes -->
   <remote name="github"
            fetch="https://github.com/" />
-
-  <remote name="gitlab"
-           fetch="https://gitlab.com/" />
  
   <remote name="screwd"
            fetch="https://github.com/ScrewdAOSP" />
+
+  <remote name="staging"
+           fetch="https://github.com/ScrewdStaging" />
 
   <remote name="private"
            fetch="https://github.com/MrApocalypse" />
@@ -18,116 +18,9 @@
            fetch="https://source.codeaurora.org/" />
 
   <!-- Screw'd Repos -->
-  <project path="manifest" name="manifest" remote="screwd" revision="o8x-caf" />
+  <project path="manifest" name="manifest" remote="staging" revision="p" />
 
-  <project path="build/make" name="build" remote="screwd" revision="o8x" >
-    <copyfile src="core/root.mk" dest="Makefile" />
-    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
-    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
-    <linkfile src="core" dest="build/core" />
-    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
-    <linkfile src="target" dest="build/target" />
-    <linkfile src="tools" dest="build/tools" />
-  </project>
-
-  <project path="build/kati" name="build_kati" remote="screwd" revision="o8x" />
-  <project path="build/soong" name="build_soong" remote="screwd" revision="o8x" >
-    <linkfile src="root.bp" dest="Android.bp" />
-    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
-  </project>
-  <project path="bootable/recovery" name="bootable_recovery" remote="screwd" revision="o8x" />
-  <project path="bionic" name="bionic" remote="screwd" revision="o8x"/>
-
-  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="screwd" revision="o8x-caf" />
-
-  <project path="external/brctl" name="quic/la/platform/external/brctl" remote="codeaurora" revision="LA.AF.1.2.1_rb1.27" />
-  <project path="external/clang" name="external_clang" remote="screwd" revision="o8x" />
-  <project path="external/ebtables" name="external_ebtables" remote="screwd" revision="o8x-caf" />
-  <project path="external/DUtils" name="external_DUtils" remote="screwd" revision="o8x" />
-  <project path="external/fuse" name="external_fuse" remote="screwd" revision="o8x-caf" />
-  <project path="external/htop" name="external_htop" remote="screwd" revision="o8x-caf" />
-  <project path="external/json-c" name="quic/la/platform/external/json-c" remote="codeaurora" revision="android-external.lnx.2.9.1.r5-rel" />
-  <project path="external/libncurses" name="external_libncurses" remote="screwd" revision="o8x-caf" />
-  <project path="external/libnfc-nxp" name="external/gigabyte/platform/external/libnfc-nxp" remote="codeaurora" revision="caf/LA.AF.1.1.1_rb1.18" />
-  <project path="external/nano" name="external_nano" remote="screwd" revision="o8x-caf" />
-  <project path="external/selinux" name="external_selinux" remote="screwd" revision="o8x-caf" />
-  <project path="external/tinycompress" name="external_tinycompress" remote="screwd" revision="o8x-caf" />
-  <project path="external/toybox" name="quic/la/platform/external/toybox" remote="codeaurora" revision="aosp-new/oreo-mr1-release" />
-  
-  <project path="frameworks/av" name="frameworks_av" remote="screwd" revision="o8x-caf" />
-  <project path="frameworks/base" name="frameworks_base" remote="screwd" revision="o8x" />
-  <project path="frameworks/native" name="frameworks_native" remote="screwd" revision="o8x" />
-  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="screwd" revision="o8x-caf" />
-  <project path="frameworks/opt/net/ims" name="frameworks_opt_net_ims" remote="screwd" revision="o8x-caf" />
-  <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" remote="screwd" revision="o8x-caf" />
-  <project path="frameworks/support" name="frameworks_support" remote="screwd" revision="o8x" />
- 
-  <project path="hardware/interfaces" name="hardware_interfaces" remote="screwd" revision="o8x-caf" />
-  <project path="hardware/libhardware" name="hardware_libhardware" remote="screwd" revision="o8x-caf" />
-  <project path="hardware/libhardware_legacy" name="hardware_libhardware_legacy" remote="screwd" revision="o8x-caf" />
-  <project path="hardware/qcom/audio/default" name="hardware_qcom_audio" remote="screwd" revision="o8x-caf" />
-  <project path="hardware/qcom/audio-caf/msm8996" name="hardware_qcom_audio" remote="screwd" revision="o8x-caf-8996" />
-  <project path="hardware/qcom/audio-caf/msm8998" name="hardware_qcom_audio" remote="screwd" revision="o8x-caf-8998" />
-  <project path="hardware/qcom/bootctrl" name="hardware_qcom_bootctrl" remote="screwd" revision="o8x-caf" />
-  <project path="hardware/qcom/bt" name="hardware_qcom_bt" remote="screwd" revision="o8x-caf" />
-  <project path="hardware/qcom/camera" name="hardware_qcom_camera" remote="screwd" revision="o8x-caf" />
-  <project path="hardware/qcom/display" name="hardware_qcom_display" remote="screwd" revision="o8x-caf" />
-  <project path="hardware/qcom/display-caf/msm8996" name="hardware_qcom_display" remote="screwd" revision="o8x-caf-8996" />
-  <project path="hardware/qcom/display-caf/msm8998" name="hardware_qcom_display" remote="screwd" revision="o8x-caf-8998" />
-  <project path="hardware/qcom/gps" name="hardware_qcom_gps" remote="screwd" revision="o8x-caf" />
-  <project path="hardware/qcom/keymaster" name="hardware_qcom_keymaster" remote="screwd" revision="o8x" />
-  <project path="hardware/qcom/media" name="hardware_qcom_media" remote="screwd" revision="o8x-caf" />
-  <project path="hardware/qcom/media-caf/msm8996" name="hardware_qcom_media" remote="screwd" revision="o8x-caf-8996" />
-  <project path="hardware/qcom/media-caf/msm8998" name="hardware_qcom_media" remote="screwd" revision="o8x-caf-8998" />
-  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="screwd" revision="o8x-caf" />
-  <project path="hardware/ril" name="hardware_ril" remote="screwd" revision="o8x" />
-  <project path="hardware/qcom/msm8x84" name="hardware_qcom_msm8x84" remote="screwd" revision="o8x-caf" />
-  <project path="hardware/qcom/power" name="hardware_qcom_power" remote="screwd" revision="o8x-caf" />
-
-  <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="screwd" revision="o8x" />
-  <project path="packages/apps/Camera2" name="packages_apps_Camera2" remote="screwd" revision="o8x" />
-  <project path="packages/apps/CellBroadcastReceiver" name="packages_apps_CellBroadcastReceiver" remote="screwd" revision="o8x" />
-  <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" remote="screwd" revision="o8x" />
-  <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="screwd" revision="o8x" />
-  <project path="packages/apps/DUI" name="packages_apps_DUI" remote="screwd" revision="o8x" />
-  <project path="packages/apps/EmergencyInfo" name="packages_apps_EmergencyInfo" remote="screwd" revision="o8x" />
-  <project path="packages/apps/Gallery2" name="packages_apps_Gallery2" remote="screwd" revision="o8x" />
-  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="screwd" revision="o8x" />
-  <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="screwd" revision="o8x" />
-  <project path="packages/apps/OmniSwitch" name="packages_apps_OmniSwitch" remote="screwd" revision="o8x" />
-  <project path="packages/apps/PackageInstaller" name="packages_apps_PackageInstaller" remote="screwd" revision="o8x" />
-  <project path="packages/apps/PhoneCommon" name="packages_apps_PhoneCommon" remote="screwd" revision="o8x-caf" />
-  <project path="packages/apps/ScrewShop" name="packages_apps_ScrewShop" remote="screwd" revision="o8x" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="screwd" revision="o8x" />
-  <project path="packages/apps/SlimRecents" name="packages_apps_SlimRecents" remote="screwd" revision="o8x" />
-
-  <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" remote="screwd" revision="o8x"  />
-
-  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="screwd" revision="o8x" />
-  <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="screwd" revision="o8x" />
-
-  <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="screwd" revision="o8x" />
-  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="screwd" revision="o8x-caf" />
-  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="screwd" revision="o8x-caf" />
-
-  <project path="prebuilts/clang/host/linux-x86" name="prebuilts_clang_host_linux-x86" remote="screwd" revision="o8x" />
-
-  <project path="system/bt" name="system_bt" remote="screwd" revision="o8x-caf" />
-  <project path="system/core" name="system_core" remote="screwd" revision="o8x-caf" />
-  <project path="system/hwservicemanager" name="system_hwservicemanager" remote="screwd" revision="o8x-caf" />
-  <project path="system/libhidl" name="system_libhidl" remote="screwd" revision="o8x-caf" />
-  <project path="system/media" name="system_media" remote="screwd" revision="o8x" />
-  <project path="system/nfc" name="system_nfc" remote="screwd" revision="o8x-caf" />
-  <project path="system/sepolicy" name="system_sepolicy" remote="screwd" revision="o8x" />
-  <project path="system/vold" name="system_vold" remote="screwd" revision="o8x-caf" />
-  
-  <project path="vendor/codeaurora/telephony" name="vendor_codeaurora_telephony" remote="screwd" revision="o8x-caf" />
-  <project path="vendor/extras" name="vendor_extras" remote="screwd" revision="o8x" />
-  <project path="vendor/qcom/opensource/cryptfs_hw" name="vendor_qcom_opensource_cryptfs_hw" remote="screwd" revision="o8x-caf" />
-  <project path="vendor/qcom/opensource/dataservices" name="vendor_qcom_opensource_dataservices" remote="screwd" revision="o8x-caf" />
-  <project path="vendor/qcom/opensource/interfaces" name="vendor_qcom_opensource_interfaces" remote="screwd" revision="o8x-caf" />
-
-  <project path="vendor/screwd" name="vendor_screwd" remote="screwd" revision="o8x" >
+  <project path="vendor/screwd" name="vendor_screwd" remote="staging" revision="p" >
      <copyfile src="build.sh" dest="rom-build.sh" />
      <copyfile src="kernel_build.sh" dest="kernel-build.sh" />
      <linkfile src="scripts/merge-aosp.sh" dest="merge-aosp.sh" />
