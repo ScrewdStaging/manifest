@@ -25,5 +25,6 @@
      <copyfile src="kernel_build.sh" dest="kernel-build.sh" />
      <linkfile src="scripts/merge-aosp.sh" dest="merge-aosp.sh" />
   </project>
+  <project path="vendor/extras" name="vendor_extras" remote="staging" revision="p" />
 
 </manifest>
