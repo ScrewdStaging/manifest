@@ -20,6 +20,9 @@
   <!-- Screw'd Repos -->
   <project path="manifest" name="manifest" remote="staging" revision="p" />
 
+
+  <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="staging" revision="p" />
+
   <project path="vendor/screwd" name="vendor_screwd" remote="staging" revision="p" >
      <copyfile src="build.sh" dest="rom-build.sh" />
      <copyfile src="kernel_build.sh" dest="kernel-build.sh" />
